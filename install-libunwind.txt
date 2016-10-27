@@ -1,0 +1,34 @@
+Making install in src
+make[1]: Entering directory '/data/data/com.termux/files/pkg/ps/libunwind/alu/src'
+make  install-am
+make[2]: Entering directory '/data/data/com.termux/files/pkg/ps/libunwind/alu/src'
+depbase=`echo coredump/_UCD_accessors.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/data/data/com.termux/files/usr/bin/bash ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../include  -I../include -I../include/tdep-aarch64 -I. -I/data/data/com.termux/files/usr/include -D_GNU_SOURCE -DNDEBUG  -I/data/data/com.termux/files/usr/include -D__ANDROID__ -D__arm__ -D__aarch64__ -Wno-maybe-uninitialized -fexceptions -Wall -Wsign-compare -MT coredump/_UCD_accessors.lo -MD -MP -MF $depbase.Tpo -c -o coredump/_UCD_accessors.lo coredump/_UCD_accessors.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../include -I../include -I../include/tdep-aarch64 -I. -I/data/data/com.termux/files/usr/include -D_GNU_SOURCE -DNDEBUG -I/data/data/com.termux/files/usr/include -D__ANDROID__ -D__arm__ -D__aarch64__ -Wno-maybe-uninitialized -fexceptions -Wall -Wsign-compare -MT coredump/_UCD_accessors.lo -MD -MP -MF coredump/.deps/_UCD_accessors.Tpo -c coredump/_UCD_accessors.c  -fPIC -DPIC -o coredump/.libs/_UCD_accessors.o
+warning: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]
+1 warning generated.
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../include -I../include -I../include/tdep-aarch64 -I. -I/data/data/com.termux/files/usr/include -D_GNU_SOURCE -DNDEBUG -I/data/data/com.termux/files/usr/include -D__ANDROID__ -D__arm__ -D__aarch64__ -Wno-maybe-uninitialized -fexceptions -Wall -Wsign-compare -MT coredump/_UCD_accessors.lo -MD -MP -MF coredump/.deps/_UCD_accessors.Tpo -c coredump/_UCD_accessors.c -o coredump/_UCD_accessors.o >/dev/null 2>&1
+depbase=`echo coredump/_UCD_create.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/data/data/com.termux/files/usr/bin/bash ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../include  -I../include -I../include/tdep-aarch64 -I. -I/data/data/com.termux/files/usr/include -D_GNU_SOURCE -DNDEBUG  -I/data/data/com.termux/files/usr/include -D__ANDROID__ -D__arm__ -D__aarch64__ -Wno-maybe-uninitialized -fexceptions -Wall -Wsign-compare -MT coredump/_UCD_create.lo -MD -MP -MF $depbase.Tpo -c -o coredump/_UCD_create.lo coredump/_UCD_create.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../include -I../include -I../include/tdep-aarch64 -I. -I/data/data/com.termux/files/usr/include -D_GNU_SOURCE -DNDEBUG -I/data/data/com.termux/files/usr/include -D__ANDROID__ -D__arm__ -D__aarch64__ -Wno-maybe-uninitialized -fexceptions -Wall -Wsign-compare -MT coredump/_UCD_create.lo -MD -MP -MF coredump/.deps/_UCD_create.Tpo -c coredump/_UCD_create.c  -fPIC -DPIC -o coredump/.libs/_UCD_create.o
+warning: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'? [-Wunknown-warning-option]
+coredump/_UCD_create.c:299:22: error: incomplete definition of type 'struct PRSTATUS_STRUCT'
+  return ui->prstatus->pr_pid;
+         ~~~~~~~~~~~~^
+coredump/_UCD_internal.h:94:12: note: forward declaration of 'struct PRSTATUS_STRUCT'
+    struct PRSTATUS_STRUCT *prstatus; /* points inside note_phdr */
+           ^
+coredump/_UCD_create.c:304:22: error: incomplete definition of type 'struct PRSTATUS_STRUCT'
+  return ui->prstatus->pr_cursig;
+         ~~~~~~~~~~~~^
+coredump/_UCD_internal.h:94:12: note: forward declaration of 'struct PRSTATUS_STRUCT'
+    struct PRSTATUS_STRUCT *prstatus; /* points inside note_phdr */
+           ^
+1 warning and 2 errors generated.
+make[2]: *** [Makefile:2871: coredump/_UCD_create.lo] Error 1
+make[2]: Leaving directory '/data/data/com.termux/files/pkg/ps/libunwind/alu/src'
+make[1]: *** [Makefile:3013: install] Error 2
+make[1]: Leaving directory '/data/data/com.termux/files/pkg/ps/libunwind/alu/src'
+make: *** [Makefile:590: install-recursive] Error 1
